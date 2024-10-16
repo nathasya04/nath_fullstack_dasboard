@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>Dapur Natira</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Orders</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Shipment</a></li>
+                    <li><a href="#">Employee</a></li>
+                </ul>
+            </nav>
+            <footer class="sidebar-footer">
+                <p>&copy; Dapur Natira 2022</p>
+                <small>Culinary independent business platform that focuses on cookies and breads.</small>
+            </footer>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <header>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for product">
+                </div>
+                <div class="profile">
+                    <img src="LOGO NATIRA.jpg" alt="Profile Logo">
+                    <p>Dapur Natira</p>
+                </div>
+            </header>
+
+            <!-- Overview Section -->
+            <section class="overview">
+                <div class="card">
+                    <p>Total Sales</p>
+                    <h6>Rp 90.000.000</h6>
+                    <p class="percentage">+21%</p>
+                </div>
+                <div class="card">
+                    <p>Total Expenses</p>
+                    <h6>Rp 11.000.000</h6>
+                    <p class="percentage negative">-17%</p>
+                </div>
+                <div class="card">
+                    <p>Total Visitors</p>
+                    <h6>8.435</h6>
+                    <p class="percentage">+48%</p>
+                </div>
+                <div class="card">
+                    <p>Total Orders</p>
+                    <h5>9,340</h6>
+                    <p class="percentage negative">-12%</p>
+                </div>
+            </section>
+
+            <!-- Chart Section -->
+            <section class="chart-section">
+                <h3>Income vs Expense</h3>
+                <canvas id="incomeChart"></canvas>
+            </section>
+
+            <!-- Popular Products Section -->
+            <section class="products-section">
+                <h3>Popular Products</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Photos</th>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>Category</th>
+                            <th>Brand</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="nastar premium.jpg" alt="Nastar Premium"></td>
+                            <td>Nastar Premium</td>
+                            <td>Mar 19, 2023</td>
+                            <td>Cookies</td>
+                            <td>Dapur Natira</td>
+                            <td>Rp 85.000</td>
+                            <td>Available</td>
+                        </tr>
+                        <tr>
+                            <td><img src="donat gula.jpg" alt="Donat Gula"></td>
+                            <td>Donat Gula</td>
+                            <td>Mar 26, 2023</td>
+                            <td>Breads</td>
+                            <td>Dapur Natira</td>
+                            <td>Rp 7.000</td>
+                            <td>Pre-Order</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <section class="profile-info">
+                <h3>Dapur Natira</h3>
+                <div class="profile-statistics">
+                    <p>18 Products</p>
+                    <p>2,362 Followers</p>
+                </div>
+            </section>
+            <section class="reputation">
+                <h3>Reputation</h3>
+                <p>Start Seller</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 78%;"></div>
+                </div>
+            </section>
+            <section class="recent-orders">
+                <h3>Recent Orders</h3>
+                <ul>
+                    <li>Nastar Premium 4x - <span>+Rp340.000</span></li>
+                    <li>Donat Gula 25x - <span>+Rp175.000</span></li>
+                    <li>Sagu Keju 3x - <span>+Rp90.000</span></li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
